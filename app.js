@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function initThemeToggle() {
   const toggleBtn = document.getElementById('themeToggleBtn');
   const icon = toggleBtn ? toggleBtn.querySelector('i') : null;
-  
+
   const savedTheme = localStorage.getItem('alifTheme') || 'light';
   document.documentElement.setAttribute('data-theme', savedTheme);
   updateThemeIcon(savedTheme);
@@ -139,18 +139,18 @@ function initFeeCalculator() {
     }
 
     let baseTuition = 18000;
-    if (stream === 'commerce') baseTuition = 20000;
-    if (stream === 'fadhila-only') baseTuition = 15000;
+    if (stream === 'commerce') baseTuition = 18000;
+    if (stream === 'fadheela') baseTuition = 18000;
 
-    let hostelFee = hostel === 'yes' ? 24000 : 0;
+    let hostelFee = hostel === 'yes' ? 0 : 0;
     let totalBase = baseTuition + hostelFee;
 
     let scholarshipDiscount = 0;
-    if (score >= 90) {
+    if (score >= 95) {
       scholarshipDiscount = 40; // 40% waiver
-    } else if (score >= 80) {
+    } else if (score >= 90) {
       scholarshipDiscount = 25; // 25% waiver
-    } else if (score >= 70) {
+    } else if (score >= 85) {
       scholarshipDiscount = 15; // 15% waiver
     }
 
@@ -318,7 +318,7 @@ function initFaqAccordion() {
     if (questionBtn) {
       questionBtn.addEventListener('click', () => {
         const isActive = item.classList.contains('active');
-        
+
         faqItems.forEach(i => i.classList.remove('active'));
         if (!isActive) {
           item.classList.add('active');
