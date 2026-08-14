@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALIF SHE CAMPUS | Under Construction</title>
+  <meta name="description" content="ALIF SHE CAMPUS official website is under construction. Contact: +91 95626 64347.">
+
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at center, #062c23 0%, #021611 100%);
+      color: #f0fdf4;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Ambient Background Glow */
+    .glow {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, rgba(16, 185, 129, 0.08) 50%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      max-width: 540px;
+      width: 100%;
+      background: rgba(13, 43, 35, 0.75);
+      border: 1px solid rgba(251, 191, 36, 0.3);
+      border-radius: 24px;
+      padding: 3rem 2rem;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo-badge {
+      width: 88px;
+      height: 88px;
+      background: #ffffff;
+      border: 2px solid rgba(251, 191, 36, 0.7);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      padding: 8px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35), 0 0 20px rgba(245, 158, 11, 0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+
+    .logo-badge:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45), 0 0 25px rgba(245, 158, 11, 0.4);
+    }
+
+    .logo-badge img,
+    .logo-img,
+    .hero-img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: #fbbf24;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.5px;
+    }
+
+    .pulse {
+      width: 7px;
+      height: 7px;
+      background-color: #fbbf24;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #fbbf24;
+      animation: blink 1.5s infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.4;
+      }
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.25rem;
+      background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #d97706 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    p.description {
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .contact-box {
+      background: rgba(6, 78, 59, 0.4);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .contact-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #94a3b8;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+
+    .phone-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #fbbf24;
+      text-decoration: none;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .phone-link:hover {
+      transform: scale(1.03);
+      color: #f59e0b;
+    }
+
+    .actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.6rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .btn-call {
+      background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #d97706 100%);
+      color: #031c16;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+    }
+
+    .btn-call:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(245, 158, 11, 0.45);
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: #64748b;
+    }
+
+    iframe {
+      border: none !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="glow"></div>
+
+  <div class="card">
+    <div class="logo-badge">
+      <img src="./aliflogo.png" alt="Alif She Campus Logo" class="hero-img">
+    </div>
+    <div class="tag">
+      <span class="pulse"></span> SITE UNDER CONSTRUCTION
+    </div>
+
+    <h1>ALIF SHE CAMPUS</h1>
+    <div class="subtitle">South Chithari • CSWC Affiliated</div>
+
+    <p class="description">
+      Our official website is under construction and launching soon. For admissions and inquiries, please contact us.
+    </p>
+
+    <div class="contact-box">
+      <div class="contact-title">Contact & Admission Helpline</div>
+      <a href="tel:+919562664347" class="phone-link">
+        <i class="fas fa-phone-alt"></i> +91 95626 64347
+      </a>
+    </div>
+
+    <div class="actions">
+      <a href="tel:+919562664347" class="btn btn-call">
+        <i class="fas fa-phone-alt"></i> Call Now
+      </a>
+      <a href="https://wa.me/919562664347?text=Hello%20Alif%20She%20Campus,%20I%20would%20like%20to%20inquire%20about%20admissions."
+        target="_blank" rel="noopener" class="btn btn-whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp Us
+      </a>
+    </div>
+
+    <footer>
+      &copy; 2026 ALIF SHE CAMPUS, South Chithari, Kasaragod, Kerala.
+    </footer>
+  </div>
+
+</body>
+
+</html>
