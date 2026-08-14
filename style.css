@@ -73,7 +73,9 @@
 }
 
 /* Reset & Touch Foundations */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -107,14 +109,21 @@ img {
   display: block;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font-family: inherit;
   font-size: inherit;
   -webkit-tap-highlight-color: transparent;
 }
 
 /* Touch Friendly Targets */
-button, .btn, .nav-link, .tab-btn, .faq-question {
+button,
+.btn,
+.nav-link,
+.tab-btn,
+.faq-question {
   min-height: 44px;
 }
 
@@ -175,6 +184,7 @@ button, .btn, .nav-link, .tab-btn, .faq-question {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -198,20 +208,26 @@ button, .btn, .nav-link, .tab-btn, .faq-question {
 }
 
 @keyframes bullhorn-pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1) rotate(0deg);
     filter: drop-shadow(0 0 2px rgba(245, 158, 11, 0.6));
   }
+
   15% {
     transform: scale(1.25) rotate(-10deg);
     filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.9));
   }
+
   30% {
     transform: scale(1.25) rotate(10deg);
   }
+
   45% {
     transform: scale(1.1) rotate(-5deg);
   }
+
   60% {
     transform: scale(1) rotate(0deg);
   }
@@ -231,8 +247,16 @@ button, .btn, .nav-link, .tab-btn, .faq-question {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.75; transform: scale(1.02); }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.75;
+    transform: scale(1.02);
+  }
 }
 
 .top-contacts {
@@ -287,8 +311,8 @@ button, .btn, .nav-link, .tab-btn, .faq-question {
 .logo-crest {
   width: 44px;
   height: 44px;
-  background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
-  border: 2px solid var(--accent-gold-400);
+  background: #ffffff;
+  /* border: 2px solid var(--accent-gold-400); */
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -299,6 +323,15 @@ button, .btn, .nav-link, .tab-btn, .faq-question {
   font-size: 1.4rem;
   box-shadow: var(--shadow-sm);
   flex-shrink: 0;
+  overflow: hidden;
+}
+
+.logo-crest img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 3px;
+  display: block;
 }
 
 .logo-text h1 {
@@ -480,7 +513,7 @@ button, .btn, .nav-link, .tab-btn, .faq-question {
   padding: clamp(40px, 8vw, 80px) 20px clamp(50px, 10vw, 100px);
   overflow: hidden;
   background: radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.12) 0%, transparent 60%),
-              radial-gradient(circle at 10% 80%, rgba(217, 119, 6, 0.08) 0%, transparent 50%);
+    radial-gradient(circle at 10% 80%, rgba(217, 119, 6, 0.08) 0%, transparent 50%);
 }
 
 .hero-grid {
@@ -809,7 +842,8 @@ button, .btn, .nav-link, .tab-btn, .faq-question {
   white-space: nowrap;
 }
 
-.tab-btn.active, .tab-btn:hover {
+.tab-btn.active,
+.tab-btn:hover {
   background: var(--primary-800);
   color: #ffffff;
   border-color: var(--primary-800);
@@ -964,7 +998,8 @@ button, .btn, .nav-link, .tab-btn, .faq-question {
   color: var(--accent-gold-100);
 }
 
-.calc-field select, .calc-field input[type="range"] {
+.calc-field select,
+.calc-field input[type="range"] {
   width: 100%;
   padding: 12px;
   border-radius: var(--radius-sm);
@@ -1350,22 +1385,28 @@ button, .btn, .nav-link, .tab-btn, .faq-question {
   .hero-grid {
     grid-template-columns: 1fr;
   }
+
   .hero-media-wrapper {
     max-width: 680px;
     margin: 0 auto;
   }
+
   .calc-grid {
     grid-template-columns: 1fr;
   }
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
+
   .contact-layout-grid {
     grid-template-columns: 1fr !important;
   }
+
   .pillars-grid:not(.contact-layout-grid) {
     grid-template-columns: repeat(2, 1fr);
   }
+
   #facilities .pillars-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1376,9 +1417,11 @@ button, .btn, .nav-link, .tab-btn, .faq-question {
   .mobile-toggle {
     display: flex;
   }
+
   .top-contacts {
     display: none;
   }
+
   .nav-menu {
     position: fixed;
     top: 0;
@@ -1396,24 +1439,30 @@ button, .btn, .nav-link, .tab-btn, .faq-question {
     z-index: 999;
     overflow-y: auto;
   }
+
   .nav-menu.active {
     right: 0;
   }
+
   .nav-menu li {
     width: 100%;
   }
+
   .nav-link {
     width: 100%;
     padding: 12px 0;
     font-size: 1.05rem;
     border-bottom: 1px solid var(--border-subtle);
   }
+
   .nav-link::after {
     display: none;
   }
+
   .nav-actions {
     margin-left: auto;
   }
+
   .nav-actions .btn-gold {
     padding: 8px 16px;
     font-size: 0.825rem;
@@ -1425,30 +1474,38 @@ button, .btn, .nav-link, .tab-btn, .faq-question {
   .top-bar-container {
     justify-content: center;
   }
+
   .announcement-ticker {
     width: 100%;
   }
+
   .ticker-item {
     font-size: 0.775rem;
   }
+
   .hero-cta-group {
     flex-direction: column;
     align-items: stretch;
   }
+
   .hero-cta-group .btn {
     width: 100%;
   }
+
   .hero-stats-row {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
     text-align: center;
   }
+
   .pillars-grid:not(.contact-layout-grid) {
     grid-template-columns: 1fr;
   }
+
   #facilities .pillars-grid {
     grid-template-columns: 1fr;
   }
+
   .floating-badge {
     position: relative;
     bottom: auto;
@@ -1457,23 +1514,30 @@ button, .btn, .nav-link, .tab-btn, .faq-question {
     width: 100%;
     max-width: 100%;
   }
+
   .form-grid {
     grid-template-columns: 1fr;
   }
+
   .form-group.full-width {
     grid-column: span 1;
   }
+
   .footer-grid {
     grid-template-columns: 1fr;
   }
+
   .step-label {
-    display: none; /* Hide labels on tiny screens for step numbers */
+    display: none;
+    /* Hide labels on tiny screens for step numbers */
   }
+
   .course-card-footer {
     flex-direction: column;
     align-items: stretch;
     text-align: center;
   }
+
   .course-card-footer .btn {
     width: 100%;
   }
@@ -1484,25 +1548,32 @@ button, .btn, .nav-link, .tab-btn, .faq-question {
   .brand-logo {
     gap: 8px;
   }
+
   .logo-crest {
     width: 38px;
     height: 38px;
     font-size: 1.2rem;
   }
+
   .logo-text h1 {
     font-size: 1rem;
   }
+
   .logo-text span {
     font-size: 0.625rem;
   }
+
   .nav-actions .btn-gold {
-    display: none; /* Hide top CTA on tiny screens, access via drawer or hero */
+    display: none;
+    /* Hide top CTA on tiny screens, access via drawer or hero */
   }
+
   .hero-stats-row {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     text-align: center;
   }
+
   .tab-filter-bar {
     justify-content: flex-start;
     overflow-x: auto;
